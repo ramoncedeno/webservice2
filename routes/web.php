@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +20,31 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//rutas de usuario
+
+Route::prefix('api')->group(function () {
+
+    //tendran prefijo /api
+
+    Route::get('users',function(){
+
+        return "nombre de usuario";
+    });
+
+});
+
+Route::prefix('api')->group(function () {
+
+    Route::get('get_users',[App\Http\Controllers\PruebasController::class,'getUsers']);
+    Route::get('list_users',[App\Http\Controllers\PruebasController::class,'listUsers']);
+    Route::get('list_users_from_db',[App\Http\Controllers\PruebasController::class,'listUsersFromdb']);
+
+
+    });
+
+
+
