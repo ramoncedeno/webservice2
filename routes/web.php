@@ -42,7 +42,7 @@ Route::prefix('api')->group(function () {
     Route::get('get_users',[App\Http\Controllers\PruebasController::class,'getUsers']);
     Route::get('list_users',[App\Http\Controllers\PruebasController::class,'listUsers']);
     Route::get('list_users_from_db',[App\Http\Controllers\PruebasController::class,'listUsersFromdb']);
-
+    Route::get('list_users_from_dbigs',[App\Http\Controllers\PruebasController::class,'listUsersFromdbigs']);
 
     });
 
