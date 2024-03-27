@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Exception;
 
-class PruebasController extends Controller
+class UserController extends Controller
 {
     //método para usuario
     public function getUsers(){

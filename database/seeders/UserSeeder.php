@@ -18,17 +18,17 @@ class UserSeeder extends Seeder
         $users = [
             [
                 'name'=>'Ramón Cedeño',
-                'email'=>'ramon.c@allphptricks.com',
-                'password'=> Hash::make('javed1234')
+                'email'=>'r.cedeno@uinenlinea.mx',
+                'password'=> Hash::make('12345678')
             ],
             [
                 'name'=>'Cesar Valencia',
-                'email'=>'cesar.c@allphptricks.com',
-                'password'=> Hash::make('ahsan1234')
+                'email'=>'cesar.v@gmail.com.com',
+                'password'=> Hash::make('12345678')
             ],
             [
                 'name'=>'Miguel Morales',
-                'email'=>'miguel.m@allphptricks.com',
+                'email'=>'miguel.v@gmail.com',
                 'password'=> Hash::make('muqeet1234')
             ]
         ];
