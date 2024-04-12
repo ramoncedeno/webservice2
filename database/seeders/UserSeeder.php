@@ -21,16 +21,7 @@ class UserSeeder extends Seeder
                 'email'=>'r.cedeno@uinenlinea.mx',
                 'password'=> Hash::make('12345678')
             ],
-            [
-                'name'=>'Cesar Valencia',
-                'email'=>'cesar.v@gmail.com.com',
-                'password'=> Hash::make('12345678')
-            ],
-            [
-                'name'=>'Miguel Morales',
-                'email'=>'miguel.v@gmail.com',
-                'password'=> Hash::make('muqeet1234')
-            ]
+
         ];
 
         // Looping and Inserting Array's Users into User Table
