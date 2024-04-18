@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 class UserSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database seeds.  php artisan db:seed --class=UserSeeder 
      */
     public function run(): void
     {

@@ -24,7 +24,7 @@ use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Seed the application's database. php artisan db:see
      */
     public function run(): void
     {
