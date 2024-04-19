@@ -41,9 +41,9 @@ Route::prefix('api')->group(function () {
 
     Route::get('get_users',[App\Http\Controllers\UserController::class,'getUsers']);
     Route::get('list_users',[App\Http\Controllers\UserController::class,'listUsers']);
-    Route::get('list_users_from_db',[App\Http\Controllers\UserController::class,'listUsersFromdb']);
-    Route::get('list_users_from_dbigs',[App\Http\Controllers\UserController::class,'listUsersFromdbigs']);
-    Route::get('listUsersFromdbWinthParams',[App\Http\Controllers\UserController::class,'listUsersFromdbWinthParams']);
+    Route::get('list_users_from_db',[App\Http\Controllers\UserController::class,'listUsersFromdb'])->middleware('auth');
+    Route::get('list_users_from_dbigs',[App\Http\Controllers\UserController::class,'listUsersFromdbigs'])->middleware('auth');
+    Route::get('listUsersFromdbWinthParams',[App\Http\Controllers\UserController::class,'listUsersFromdbWinthParams'])->middleware('auth');
 
     });
 
