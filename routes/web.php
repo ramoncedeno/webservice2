@@ -45,6 +45,11 @@ Route::prefix('api')->group(function () {
     Route::get('list_users_from_dbigs',[App\Http\Controllers\UserController::class,'listUsersFromdbigs']);
     Route::get('listUsersFromdbWinthParams',[App\Http\Controllers\UserController::class,'listUsersFromdbWinthParams']);
 
+    //Probando funcionalidades del controlador
+    Route::get('testgetuser',[App\Http\Controllers\UserController::class,'testgetuser']);
+    Route::get('testlistofUsers',[App\Http\Controllers\UserController::class,'testlistofUsers']);
+    Route::get('testlistUsersFromdb',[App\Http\Controllers\UserController::class,'testlistUsersFromdb']);
+
 
 
 });

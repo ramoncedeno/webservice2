@@ -27,7 +27,7 @@ class UserController extends Controller
     //método lista de usuarios desde la base de datos tomando el modelo User::
     public function listUsersFromdb()
     {
-        //$listUsers = User::paginate(5); // pagina 
+        //$listUsers = User::paginate(5); // pagina
 
         $listUsers = DB::table('users')
                         ->select(DB::raw('count(*) as conteo_jodon,name'))
@@ -91,5 +91,46 @@ class UserController extends Controller
 
 
     }
+
+    public function testgetuser()
+    {
+        $data = []; // Arreglo para almacenar los resultados de listUsersFromdbWinthParams
+
+        for ($testgetuser = 0; $testgetuser <= 50; $testgetuser++) {
+            $result = $this->get_users(new Request(), new Response());
+            $data[] = $result; // Agrega el resultado al arreglo de datos
+        }
+
+        return $data;
+    }
+
+    public function testlistofUsers()
+    {
+        $data = []; // Arreglo para almacenar los resultados de listUsersFromdbWinthParams
+
+        // Ciclo for que se ejecuta 50 veces (desde 1 hasta 50)
+        for ($testlistofUsers = 1; $testlistofUsers <= 50; $testlistofUsers++) {
+            $result = $this->listofUsers(new Request(), new Response()); // Llama a listUsersFromdbWinthParams y pasa una nueva instancia de Request y Response
+            $data[] = $result; // Agrega el resultado al arreglo de datos
+        }
+
+        return $data; // Devuelve el arreglo con todos los resultados
+    }
+
+    public function testlistUsersFromdb()
+    {
+        $data = []; // Arreglo para almacenar los resultados de listUsersFromdbWinthParams
+
+        for ($testlistUsersFromdb = 0; $testlistUsersFromdb <= 2; $testlistUsersFromdb++) {
+            $result = $this->listUsersFromdb(new Request(), new Response());
+            $data[] = $result; // Agrega el resultado al arreglo de datos
+        }
+
+        return $data;
+
+
+
+
+
 
 }
