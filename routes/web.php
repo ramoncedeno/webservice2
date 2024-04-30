@@ -45,7 +45,6 @@ Route::prefix('api')->group(function () {
     Route::get('list_users_from_dbigs',[App\Http\Controllers\UserController::class,'listUsersFromdbigs']);
     Route::get('listUsersFromdbWinthParams',[App\Http\Controllers\UserController::class,'listUsersFromdbWinthParams']);
 
-    });
 
 
 });
