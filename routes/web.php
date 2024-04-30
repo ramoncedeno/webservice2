@@ -38,28 +38,14 @@ Route::prefix('api')->group(function () {
 });
 
 Route::prefix('api')->group(function () {
-    // Route to get users
-    Route::get('get_users',[App\Http\Controllers\UserController::class,'getUsers']);//->middleware('auth');
 
-    // Route to list users
-    Route::get('listofUsers',[App\Http\Controllers\UserController::class,'listofUsers']);//->middleware('auth');
+    Route::get('get_users',[App\Http\Controllers\UserController::class,'getUsers']);
+    Route::get('list_users',[App\Http\Controllers\UserController::class,'listUsers']);
+    Route::get('list_users_from_db',[App\Http\Controllers\UserController::class,'listUsersFromdb']);
+    Route::get('list_users_from_dbigs',[App\Http\Controllers\UserController::class,'listUsersFromdbigs']);
+    Route::get('listUsersFromdbWinthParams',[App\Http\Controllers\UserController::class,'listUsersFromdbWinthParams']);
 
-    // Route to list users from the database
-    Route::get('listUsersFromdb',[App\Http\Controllers\UserController::class,'listUsersFromdb']);//->middleware('auth');
-
-    // Route to list users from a specific database (dbigs)
-    Route::get('list_users_from_dbigs',[App\Http\Controllers\UserController::class,'listUsersFromdbigs']);//->middleware('auth');
-
-    // Route to list users from the database with custom parameters
-    Route::get('listUsersFromdbWinthParams',[App\Http\Controllers\UserController::class,'listUsersFromdbWinthParams']);//->middleware('auth');
+    });
 
 
-    //probando rutas sin postman
-    // Route to get users
-    Route::get('testgetuser',[App\Http\Controllers\UserController::class,'testgetuser']);
-    Route::get('testlistofUsers',[App\Http\Controllers\UserController::class,'testlistofUsers']);
-    Route::get('testlistUsersFromdb',[App\Http\Controllers\UserController::class,'testlistUsersFromdb']);
 });
-
-
-
