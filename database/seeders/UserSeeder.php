@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 class UserSeeder extends Seeder
 {
     /**
-     * Run the database seeds.  php artisan db:seed --class=UserSeeder 
+     * Run the database seeds.  php artisan db:seed --class=UserSeeder
      */
     public function run(): void
     {
@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
         $users = [
             [
                 'name'=>'Ramón Cedeño',
-                'email'=>'r.cedeno@uinenlinea.mx',
+                'email'=>'r.cedeno@igroupsolution.com',
                 'password'=> Hash::make('12345678')
             ],
 
